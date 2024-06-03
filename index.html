@@ -19,7 +19,7 @@
     integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!--Custom CSS-->
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -28,144 +28,67 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
 <body>
-
+<!--head-->
   <nav class="navbar navbar-expand-md navbar-dark bg-dark">
     <div class="container-fluid">
       <!--Icono-->
 
       <a class="navbar-brand" href="#">
-        <i style="color: rgb(88, 80, 80)"></i>
+        <i style="color: rgb(240, 228, 228)"></i>
         <Span class="text-white">colegio la milagrosa </Span>
       </a>
-
-      <!--Botón Menú-->
-      <!--button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>-->
-
-      <!--Elementos del botón colapsable-->
-
-
-
-      <div class="collapse navbar-collapse" id="menu">
-        <ul class="navbar-nav md-auto">
-          <li class="nav-item"><a class="nav-link active" style="color: rgb(11, 129, 240)" href="#"><i
-                class="bi bi-house-door-fill"></i> Home</a></li>
-        </ul>
-
-        <ul class="navbar-nav ms-auto">
-
-          <li class="nav-item dropdown">
-            <a class="nav-link active dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-              href="#">Herramientas</a>
-            <ul class="dropdown-menu bg-secondary">
-              <li><a class="dropdown-item" href="">Servicios</a></li>
-            </ul>
-          </li>
-        </ul>
-
-        <!-- Enlaces redes sociales
-        <ul class="navbar-nav flex-row flex-wrap text-light">
-          <li class="nav-item col-6 col-md-auto p-3">
-            <i class="bi bi-twitter"></i>
-            <small class="d-md-none ms-2">Twitter</small>
-          </li>
-          <li class="nav-item col-6 col-md-auto p-3">
-            <i class="bi bi-github"></i>
-            <small class="d-md-none ms-2">GitHub</small>
-          </li>
-          <li class="nav-item col-6 col-md-auto p-3">
-            <i class="bi bi-instagram"></i>
-            <small class="d-md-none ms-2">Instagram</small>
-          </li>
-          <li class="nav-item col-6 col-md-auto p-3">
-            <i class="bi bi-facebook"></i>
-            <small class="d-md-none ms-2">Facebook</small>
-          </li>
-        </ul> -->
-
-        <!--Botón información-->
-        <form class="d-flex"></form>
-        <button class="btn btn-outline-light d-none d-md-inline-block" type="submit">Información</button>
-
-
-      </div>
-
-    </div>
   </nav>
 
-  <!-- Inventario-->
+  <!-- ingreso de materias y estudiantes -->
   <div class="container my-4">
     <div class="row">
       <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
-        <h2>cantidad de estudiantes </h2>
+        <h2> estudiantes </h2>
         <form>
-          <div class="form-group">
-            <label for="exampleFormControlSelect1">Selecciona el tipo</label>
-            <select class="form-control form-control-sm" id="exampleFormControlSelect1">
-              <option selected>Seleccionar</option>
-              <option>Blusa</option>
-              <option>Bermuda</option>
-              <option>Calcetines</option>
-              <option>Camiseta</option>
-              <option>Camisa</option>
-              <option>Jean</option>
-              <option>Pantalón</option>
-              <option>Zapatos</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="exampleFormControlSelect1">Selecciona la talla</label>
-            <select class="form-control form-control-sm" id="exampleFormControlSelect1">
-              <option selected>Seleccionar</option>
-              <option>A</option>
-              <option>B</option>
-              <option>C</option>
-              <option>D</option>
-            </select>
-          </div>
           <div>
-            <!--label for="exampleColorInput" class="form-label">Seleccione el color</label>
-            <input type="color" class="form-control form-control-sm col-2 form-control-color" id="exampleColorInput"
-              value="#563d7c" title="Choose your color"-->
-          </div>
-          <br>
-          <div>
-            <label for="cantidad" class="form-l">Seleccione la cantidad</label>
+            <label for="cantidad" class="form-l">ingrese la cantidad de estudiantes </label>
             <input type="number" class="form-control form-control-sm" id="cantidad">
-          </div>
-          <div class="form-group">
-            <label for="mensaje" class="form-label">Mensaje</label>
-            <textarea class="form-control form-control-sm" id="mensaje" rows="3"></textarea>
-          </div>
+            </div>
+          <div><label for="mtuno" class="form-l">ingrese materia uno </label>
+            <input type="number" class="form-control form-control-sm" id="mtuno">
+            </div>
+            
+            <div><label for="mtdos" class="form-l">ingrese materia dos </label>
+              <input type="number" class="form-control form-control-sm" id="mtdos">
+            </div>
+            
+            <div> <label for="mttres" class="form-l">ingrese materia tres </label>
+              <input type="number" class="form-control form-control-sm" id="mttres">
+              
+            </div>
+
+            
+            
 
           <div class="d-grid gap-2 d-md-block text-center">
             <button class="btn btn-success">Guardar</button>
             <button class="btn  btn-outline-dark">Limpiar</button>
+            
           </div>
-          <br>
-        </form>
+          
 
       </div>
       <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8">
         <table id="datatable_users" class="table table-striped display responsive nowrap">
-          <caption>
-            Inventario
-          </caption>
+          
           <thead>
             <tr>
               <th class="centered">#</th>
-              <th class="centered">materia 1</th>
-              <th class="centered">materia 2</th>
-              <th class="centered">materia 3</th>
-              <th class="centered">promedio</th>
-              <th class="centered">aprobo</th>
-              <th class="centered">reprobo</th>
+              <th class="centered">Materia 1</th>
+              <th class="centered">Materia 2</th>
+              <th class="centered">Materia 3</th>
+              <th class="centered">Promedio</th>
+              <th class="centered">Aprobo</th>
+              <th class="centered">Reprobo</th>
               
             </tr>
           </thead>
-          <tbody id="tableBody_users"></tbody>
+          <tbody id="tabla"></tbody>
         </table>
       </div>
     </div>
