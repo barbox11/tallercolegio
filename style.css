@@ -1,0 +1,30 @@
+body {
+    background: #93f5f5; 
+    background: -webkit-linear-gradient(to right,#93f5f5, #93f5f5, #93f5f5,#93f5f5);  
+    background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); 
+    
+
+}
+
+form-l {
+    font-weight: bold;
+    color: #333; /* Color del texto de las etiquetas de formulario */
+}
+
+.btn {
+    margin-top: 10px; /* Espacio superior */
+    margin-right: 5px; /* Espacio derecho */
+}
+
+#mensaje {
+    resize: none;
+}
+
+
+.centered {
+    text-align: center !important;
+    vertical-align: middle !important;
+}
+
+
+

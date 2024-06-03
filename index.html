@@ -1,22 +1,111 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE-edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DataTable.js</title>
+  <!--Bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <!--Bootstrap icons-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <!--DataTable-->
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.2/css/dataTables.bootstrap5.min.css" />
+  <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.4.0/css/responsive.dataTables.min.css" />
+  <!--Font Awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!--Custom CSS-->
+  <link rel="stylesheet" href="style.css" />
 </head>
-    <div id="app">{{ message }}</div>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<body>
+<!--head-->
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="container-fluid">
+      <!--Icono-->
+
+      <a class="navbar-brand" href="#">
+        <i style="color: rgb(240, 228, 228)"></i>
+        <Span class="text-white">colegio la milagrosa </Span>
+      </a>
+  </nav>
+
+  <!-- ingreso de materias y estudiantes -->
+  <div class="container my-4">
+    <div class="row">
+      <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
+        <h2> estudiantes </h2>
+        <form>
+          <div>
+            <label for="cantidad" class="form-l">ingrese la cantidad de estudiantes </label>
+            <input type="number" class="form-control form-control-sm" id="cantidad">
+            </div>
+          <div><label for="mtuno" class="form-l">ingrese materia uno </label>
+            <input type="number" class="form-control form-control-sm" id="mtuno">
+            </div>
+            
+            <div><label for="mtdos" class="form-l">ingrese materia dos </label>
+              <input type="number" class="form-control form-control-sm" id="mtdos">
+            </div>
+            
+            <div> <label for="mttres" class="form-l">ingrese materia tres </label>
+              <input type="number" class="form-control form-control-sm" id="mttres">
+              
+            </div>
+
+            
+            
+
+          <div class="d-grid gap-2 d-md-block text-center">
+            <button class="btn btn-success">Guardar</button>
+            <button class="btn  btn-outline-dark">Limpiar</button>
+            
+          </div>
+          
+
+      </div>
+      <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8">
+        <table id="datatable_users" class="table table-striped display responsive nowrap">
+          
+          <thead>
+            <tr>
+              <th class="centered">#</th>
+              <th class="centered">Materia 1</th>
+              <th class="centered">Materia 2</th>
+              <th class="centered">Materia 3</th>
+              <th class="centered">Promedio</th>
+              <th class="centered">Aprobo</th>
+              <th class="centered">Reprobo</th>
+              
+            </tr>
+          </thead>
+          <tbody id="tabla"></tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+  <!--Bootstrap-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <!--JQuery-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <!--DataTable-->
+  <script src="https://cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.2/js/dataTables.bootstrap5.min.js"></script>
+  <script src="https://cdn.datatables.net/responsive/2.4.0/js/dataTables.responsive.min.js"></script>
+  <!--Custom Js-->
+  <script src="main.js"></script>
+</body>
+
 </html>
-
-<script type="module">
-import { createApp } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
-
-createApp({
-    data() {
-        return {
-            message: 'Hello Vue!'
-        }
-    }
-}).mount('#app')
-</script>
