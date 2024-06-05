@@ -6,10 +6,12 @@ body {
 
 }
 
-form-l {
+
+.form-l {
     font-weight: bold;
     color: #333; /* Color del texto de las etiquetas de formulario */
 }
+
 
 .btn {
     margin-top: 10px; /* Espacio superior */
@@ -26,5 +28,11 @@ form-l {
     vertical-align: middle !important;
 }
 
+.contenedor {
+    display: flex;
+    gap: 20px; /* Espacio entre los elementos */          
+}
 
-
+.col {
+    flex: 4; /* Permite que las columnas ocupen el mismo espacio */
+}
