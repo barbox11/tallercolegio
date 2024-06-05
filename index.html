@@ -30,21 +30,18 @@
         <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
           <h2> estudiantes </h2>
           
-            <div>
-              <label for="cantidad" class="form-l">ingrese la cantidad de estudiantes </label>
-              <input type="number" class="form-control form-control-sm" id="cantidad">
-            </div>
+            
             <div>
               <label for="mtuno" class="form-l">ingrese Nota materia uno </label>
-              <input type="number" class="form-control form-control-sm" id="mtuno">
+              <input  v-model="registro.nota1" type="number" class="form-control form-control-sm" id="mtuno">
             </div>
             <div>
               <label for="mtdos" class="form-l">ingrese Nota materia dos </label>
-              <input type="number" class="form-control form-control-sm" id="mtdos">
+              <input v-model="registro.nota2" type="number" class="form-control form-control-sm" id="mtdos">
             </div>  
             <div> 
               <label for="mttres" class="form-l">ingrese Nota materia tres </label>
-              <input type="number" class="form-control form-control-sm" id="mttres">
+              <input v-model="registro.nota3" type="number" class="form-control form-control-sm" id="mttres">
             </div>
             <div class="d-grid gap-2 d-md-block text-center">
               <button @click="guardar" class="btn btn-success">Guardar</button>
@@ -53,6 +50,8 @@
   
         </div>
         <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8">
+          <div>Nota más alta: <span class="">{{ notaAlta }}</span></div>
+          <div>Nota más baja: {{  notaBaja }}</div>
           <table id="datatable_users" class="table table-striped display responsive nowrap">
             
             <thead>
@@ -68,7 +67,24 @@
               </tr>
             </thead>
             <tbody id="tabla">
-              
+              <tr v-for="(rg,i) in rgTabla">
+                <th class="centered">{{ i+1 }}</th>
+                <th class="centered">{{ rg.nota1 }}</th>
+                <th class="centered">{{ rg.nota2 }}</th>
+                <th class="centered">{{rg.nota3}}</th>
+                <th class="centered">{{ rg.promedio }}</th>
+                <th class="centered">
+                  {{
+                    rg.promedio >= 60 ? '✅' : ''
+                  }}
+                </th>
+                <th class="centered">
+                  {{
+                    rg.promedio <= 60 ? '❌': ''
+                  }}
+                </th>
+                
+              </tr>
             </tbody>
           </table>
         </div>
