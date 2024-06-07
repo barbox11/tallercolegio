@@ -30,9 +30,19 @@ body {
 
 .contenedor {
     display: flex;
-    gap: 20px; /* Espacio entre los elementos */          
+    gap: 40px;
+    font-weight: bold;
+    color: #333;         
 }
 
+
 .col {
-    flex: 4; /* Permite que las columnas ocupen el mismo espacio */
+    flex: 1; 
+    text-align: center; 
+    font-size: 20px;         /* Tamaño de la fuente (ajusta este valor) */
+    position: relative;
+    
 }
+
+
+
