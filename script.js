@@ -12,7 +12,7 @@ const app = Vue.createApp({
         }
     },
     methods:{
-        guardar(){       
+        guarda(){       
             const { numeroEstudiantes, ...notas } = this.registro;
 
             if(Object.values(notas).some(n=>n==null)) {
@@ -21,13 +21,13 @@ const app = Vue.createApp({
             }
 
             const ARR = Object.values(this.registro).splice(1);
-            const SUM = ARR.reduce((a,e)=>a+=e);
+            const SUM = ARR.reduce((a,e)=>a=e);
             const PROMEDIO = SUM / ARR.length;  
             this.registro['promedio'] = PROMEDIO.toFixed(1);
             this.rgTabla.push(this.registro);
             this.registro = {};
         },
-        eliminar(fila){
+        elimina(){
             this.rgTabla.splice(fila,1);
         }
 
