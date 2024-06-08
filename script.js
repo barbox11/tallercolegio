@@ -12,7 +12,14 @@ const app = Vue.createApp({
         }
     },
     methods:{
-        guardar(){          
+        guardar(){       
+            const { numeroEstudiantes, ...notas } = this.registro;
+
+            if(Object.values(notas)) {
+                alert('Ingrese notas válidas');
+                return;
+            }
+
             const ARR = Object.values(this.registro).splice(1);
             const SUM = ARR.reduce((a,e)=>a+=e);
             const PROMEDIO = SUM / ARR.length;  
