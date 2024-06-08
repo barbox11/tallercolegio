@@ -15,11 +15,10 @@ const app = Vue.createApp({
         guardar(){       
             const { numeroEstudiantes, ...notas } = this.registro;
 
-            if(Object.values(notas).every(n=>n==null)) {
+            if(Object.values(notas).some(n=>n==null)) {
                 alert('Ingrese notas válidas');
                 return;
             }
-
 
             const ARR = Object.values(this.registro).splice(1);
             const SUM = ARR.reduce((a,e)=>a+=e);
