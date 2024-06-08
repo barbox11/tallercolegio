@@ -68,27 +68,30 @@
                 <th class="centered">Promedio</th>
                 <th class="centered">Aprobo</th>
                 <th class="centered">Reprobo</th>
-                
+                <th class="centered">eliminar</th>
+              
               </tr>
             </thead>
             <tbody id="tabla">
               <tr v-for="(rg,i) in rgTabla">
-                <th class="centered">{{ i+1 }}</th>
-                <th class="centered">{{ rg.nota1 }}</th>
-                <th class="centered">{{ rg.nota2 }}</th>
-                <th class="centered">{{rg.nota3}}</th>
-                <th class="centered">{{ rg.promedio }}</th>
-                <th class="centered">
+                <td class="centered">{{ i+1 }}</td>
+                <td class="centered">{{ rg.nota1 }}</td>
+                <td class="centered">{{ rg.nota2 }}</td>
+                <td class="centered">{{rg.nota3}}</td>
+                <td class="centered">{{ rg.promedio }}</td>
+                <td class="centered">
                   {{
                     rg.promedio >= 60 ? '✅' : ''
                   }}
-                </th>
-                <th class="centered">
+                </td>
+                <td class="centered">
                   {{
                     rg.promedio <= 59 ? '❌': ''
                   }}
-                </th>
-                
+                </td>
+                <td>
+                  <button @click="eliminar(i)" class="btn btn-danger">eliminar</button>
+                  </td>
               </tr>
             </tbody>
           </table>
